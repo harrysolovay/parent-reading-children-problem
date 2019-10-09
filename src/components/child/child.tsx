@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
 export class CChild {
   render() {
     return (
-      <div>Some child</div>
+      <div class="test-class">Some child</div>
     );
   }
 }

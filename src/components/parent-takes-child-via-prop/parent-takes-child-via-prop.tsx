@@ -8,7 +8,16 @@ export class CParentTakesChildrenViaProp {
     // Computed styles are empty :/... How do we ensure
     // the child is rendered first & accessible to the parent?
     // How would we get the height for example?
-    console.log(this.child["$elm$"].style)
+
+    // null before first render:
+    console.log(this.child["$elm$"])
+
+    // after first render...
+    if (this.child["$elm$"].style) {
+      // all computed styles are blank :/
+      console.log(this.child["$elm$"].style)
+    }
+
     return (
       <div>
         {this.child}
